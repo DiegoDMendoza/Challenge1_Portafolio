@@ -1,0 +1,159 @@
+header{
+    background-color: #cccccc;
+}
+
+nav {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+
+
+
+nav li{
+    display: inline;
+    padding: 0 0 8px 16px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.titulo-principal{
+    font-size: 48px;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* CSS es de la pagina Index.html */
+
+h2{
+    padding-top: 50px;
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+    font-style: italic;
+}
+
+h3{
+    padding-top: 50px;
+    font-size: 28px;
+    font-style: normal;
+    text-align: left;
+    font-style: italic;
+}
+
+#palabra{
+    padding-top: 30px;
+    font-size: 28px;
+}
+
+#intentos{
+    padding-top: 30px;
+    font-size: 28px;
+
+}
+
+#letrasUsadas{
+    padding-top: 30px;
+    font-size: 28px;
+}
+
+h4{
+    padding-top: 50px;
+    font-size: 28px;
+    font-style: italic;
+    text-align: left;
+    font-weight: bold;
+}
+
+.mapa{
+    padding-top: 30px;
+    padding-left: 20%;
+}
+
+.copyright{
+    text-align: center;
+    font-weight: normal;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 14px;
+}
+
+/* CSS para pagina AboutMe.html */
+
+h5{
+    padding-top: 50px;
+    font-size: 28px;
+    font-style: italic;
+    text-align: justify;
+    font-weight: normal;
+}
+
+table{
+    margin: 60px 40px;
+    text-align: center;
+}
+
+td{
+    border: 1px solid black;
+    padding: 0 3px;
+}
+
+.thead{
+    background-color: #999999;
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.experiencia{
+    text-align: center;
+    font-size: 28px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 18px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* CSS es de la pagina Skills.html */
+
+.listaHobbies{
+    font-size: 22px;
+    font-style: italic;
+}
+
+.imagenHobbies{
+    display: block;
+    margin: 0 auto;
+    padding-top: 18px;
+}
+
+.video{
+    width: 560px;
+    padding-left: 30%;
+    padding-top: 05%;
+}
+
+/* CSS es de la pagina Contacto.html */
+
+.ciudades{
+    text-align: left;
+    padding-left: 20px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ES">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Diego Mendoza</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    
+        <header>
+            <img src="Engranes.jpg">        
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="Index.html">Principal</a></li>
+                        <li><a href="AboutMe.html">About Me</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="Hobbies.html">Hobbies</a></li>
+                        <li><a href="Formacion.html">Formacion</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>          
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="titulo-principal"> Hola, soy Diego Mendoza</h1>
+            <h2>
+            <p>Esta pagina de prueba es algo que he aprendido en los cursos</p>
+            <p>que Oracle y Alura Latam me estan patrocinando para aprender</p>
+            <p>de programacion Web</p>
+            </h2>
+
+            
+
+            <h3>Te dejo un juego basico para que te distraigas un rato (tip: es un animal)</h3>
+        
+            <div>
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    }
+            </style>
+            </head>
+            <body>
+                <div id="palabra"></div>
+                <div id="intentos">Intentos restantes: <span id="numIntentos">6</span></div>
+                <div id="letrasUsadas">Letras usadas: <span id="usadas"></span></div>
+                <input type="text" id="letraInput">
+                <button onclick="verificarLetra()">Intentar letra</button>
+    
+            <script>
+            // Lista de palabras
+            const palabras = ['gato', 'perro', 'elefante', 'tigre', 'leon'];
+
+            let palabraSecreta;
+            let letrasAdivinadas;
+            let intentosRestantes;
+
+            function iniciarJuego() {
+            // Seleccionar una palabra al azar
+            palabraSecreta = palabras[Math.floor(Math.random() * palabras.length)];
+
+            // Inicializar letras adivinadas
+            letrasAdivinadas = new Array(palabraSecreta.length).fill('_');
+
+            // Inicializar intentos restantes
+            intentosRestantes = 6;
+
+            // Mostrar palabra oculta
+            actualizarPalabra();
+            }
+
+            function actualizarPalabra() {
+            document.getElementById('palabra').innerText = letrasAdivinadas.join(' ');
+            document.getElementById('numIntentos').innerText = intentosRestantes;
+            }
+
+            function verificarLetra() {
+            const letraInput = document.getElementById('letraInput').value.toLowerCase();
+
+            if (letraInput.length !== 1 || !/^[a-zA-Z]+$/.test(letraInput)) {
+                alert('Ingresa una sola letra válida.');
+                return;
+            }
+
+            if (letrasAdivinadas.includes(letraInput)) {
+                alert('Ya has utilizado esta letra.');
+                return;
+            }
+
+            if (palabraSecreta.includes(letraInput)) {
+                // Actualizar letras adivinadas
+                for (let i = 0; i < palabraSecreta.length; i++) {
+                    if (palabraSecreta[i] === letraInput) {
+                        letrasAdivinadas[i] = letraInput;
+                    }
+                }
+            } else {
+                intentosRestantes--;
+                if (intentosRestantes === 0) {
+                    alert('¡Has perdido! La palabra era: ' + palabraSecreta);
+                    iniciarJuego();
+                    return;
+                }
+            }
+
+            document.getElementById('usadas').innerText += letraInput + ' ';
+            actualizarPalabra();
+
+            if (!letrasAdivinadas.includes('_')) {
+                alert('¡Felicidades! ¡Has ganado!');
+                iniciarJuego();
+            }
+
+            document.getElementById('letraInput').value = '';
+            }
+
+            window.onload = iniciarJuego;
+            </script>
+            </body>
+
+            </div>
+
+            <h4>Te dejo la ubicacion de los headquarters de Alura Latam para una mayor referencia</h4>
+
+            <section class="mapa">
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29251.598720381695!2d-46.65376669773857!3d-23.5881948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scaelum!5e0!3m2!1ses-419!2smx!4v1713421062916!5m2!1ses-419!2smx" width="800px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </section>
+    
+        </main>
+
+        <footer>
+            <p class="copyright"> &copy Copyright Oracle and Alura Latam</p>
+        </footer>
+
+    </body>
+
+</html>
